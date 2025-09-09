@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Users, MessageCircle, CreditCard, User, Calendar } from 'lucide-react';
+import { Play, Users, MessageCircle, CreditCard, User, Calendar, ArrowRight } from 'lucide-react';
 
 interface PreConfiguredAgent {
   id: string;
@@ -60,13 +60,13 @@ interface PreConfiguredAgentsProps {
 
 export function PreConfiguredAgents({ onLaunchAgent }: PreConfiguredAgentsProps) {
   return (
-    <div className="w-full max-w-7xl mx-auto px-6 py-12">
+    <div className="w-full max-w-7xl mx-auto px-6 py-16">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
-          Launch Pre-configured Agents
+          Or choose from pre-built agents
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors duration-300">
-          Choose from our curated collection of ready-to-deploy AI agents designed for common business needs
+          Ready-to-deploy AI agents designed for common business needs
         </p>
       </div>
 
@@ -75,7 +75,7 @@ export function PreConfiguredAgents({ onLaunchAgent }: PreConfiguredAgentsProps)
           <button
             key={agent.id}
             onClick={() => onLaunchAgent(agent.id)}
-            className="group relative bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-xl p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 dark:hover:shadow-[#8B5CF6]/20"
+            className="group relative bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/10 dark:hover:shadow-purple-500/20 hover:-translate-y-1"
           >
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0 w-12 h-12 bg-orange-100 dark:bg-[#8B5CF6]/15 border border-orange-200 dark:border-[#8B5CF6]/30 rounded-lg flex items-center justify-center text-orange-600 dark:text-[#8B5CF6] group-hover:bg-orange-200 dark:group-hover:bg-[#8B5CF6]/25 group-hover:border-orange-300 dark:group-hover:border-[#8B5CF6]/50 transition-all duration-300">
@@ -94,8 +94,8 @@ export function PreConfiguredAgents({ onLaunchAgent }: PreConfiguredAgentsProps)
                     {agent.category}
                   </span>
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-6 h-6 bg-orange-500 dark:bg-[#8B5CF6] rounded-full flex items-center justify-center">
-                      <Play className="h-3 w-3 text-white" />
+                    <div className="w-8 h-8 bg-orange-500 dark:bg-[#8B5CF6] rounded-full flex items-center justify-center">
+                      <ArrowRight className="h-4 w-4 text-white" />
                     </div>
                   </div>
                 </div>
